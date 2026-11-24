@@ -1,14 +1,21 @@
  #include <stdio.h>
-
+//zum kompilieren folgen Sie dem Befehl: gcc add.c -o add
 int main(void){
-    int x,y;//deklarieren der variablen
-    int sum;//declare variable
-    x = 5;//initialisieren der variablen
-    y = 10;//initialisieren der variablen
-    //placeholder for integral values coming from a variable
-    printf("der wert von x:%d\n",x);
-    printf("der wert von y:%d\n",y);
+    int x,y;
+    int sum;
+    int rem;//remainder
+float div;
+    printf("Enter the first integer: ");
+    scanf("%d", &x);
+    printf("Enter the second integer: ");
+    scanf("%d", &y);
     sum = x + y;//calculate sum of x and y
-    printf("der wert von sum:%d\n",sum);
-	return 0;
+    div= (float)x / (float)y;//calculate division of x and y
+    rem=x%y;//calculate remainder of x and y
+    printf("The value of x+y: %d\n", sum);
+    printf("The value of x/y: %f\n", div);
+    printf("The value of x%%y: %d\n", rem);
+    div= x / y;
+    printf("The value of x/y: %f\n", div);
+    return 0;
 }
